@@ -1,0 +1,37 @@
+<mat-card>
+    <mat-card-title>
+        Pojedinačna ulaznica za {{name}}
+        <mat-icon>shopping_basket</mat-icon>
+    </mat-card-title>
+    <table>
+        <tr>
+            <td class="td-image">
+                <div class="img-container"><img [src]="image" /></div>
+            </td>
+            <td class="td-buy">
+                <form (submit)="onBuy()" [formGroup]="form">
+                    <table>
+                        <tr>
+                            <td class="td-text">
+                                <span class="beforeInput">Promo kod: </span>
+                            </td>
+                            <td class="oval" [style.background-color]="color">
+                                <input matInput placeholder="Promo kod" formControlName="promoCode" class="input-style" [style.background-color]="color" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>
+                                <button mat-raised-button type="submit" class="button-style" [style.background-color]="color">Kupi</button>
+                            </td>
+                        </tr>
+                    </table>
+                    <span style="color: red">{{error_msg}}</span>
+                </form>
+            </td>
+        </tr>
+    </table>
+    <mat-card-title class="title-style">{{name}}</mat-card-title>
+    <br>
+    <span class="ticket-text">{{description}}</span>
+</mat-card>

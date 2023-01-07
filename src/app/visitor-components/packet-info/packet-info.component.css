@@ -1,0 +1,90 @@
+.container {
+    height: 100%;
+}
+
+.left {
+    background-color: rgb(217, 217, 217);
+    width: 20%;
+    height: 100%;
+    float: left;
+    display: flex;
+    /* align-items: center; */
+}
+
+.left-element {
+    padding-top: 200px;
+    width: 100%;
+    text-align: left;
+}
+
+.right {
+    background-color: rgb(217, 217, 217);
+    width: 20%;
+    height: 100%;
+    float: left;
+    display: flex;
+    /* align-items: center; */
+}
+
+.right-element {
+    padding-top: 200px;
+    width: 100%;
+    text-align: right;
+}
+
+.center {
+    background-color: rgb(217, 217, 217);
+    width: 60%;
+    height: 100%;
+    float: left;
+}
+
+mat-card {
+    width: 100%;
+    margin: auto;
+    padding: 40px;
+}
+
+mat-card-title {
+    font-family: 'Kalam';
+    font-weight: bold;
+    font-size: 28px;
+    text-align: left;
+}
+
+img {
+    width: 476px;
+    height: 214px;
+    margin: 20px;
+}
+
+table,
+tr,
+td {
+    width: 100%;
+    margin: auto;
+}
+
+.td-image {
+    width: 60%;
+}
+
+.td-buy {
+    width: 40%;
+}
+
+.img-container {
+    margin: 20px;
+    padding: 10px;
+}
+
+.packet-text {
+    font-family: 'Kalam';
+    font-size: 20px;
+    text-align: left;
+}
+
+.buy-ticket {
+    font-family: 'Kalam';
+    font-size: 28px;
+}

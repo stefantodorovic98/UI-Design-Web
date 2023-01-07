@@ -1,0 +1,48 @@
+<mat-card>
+    <mat-card-title>Dodavanje nove životinje</mat-card-title>
+    <form (submit)="onAdd()" [formGroup]="form">
+        <table>
+            <tr>
+                <td class="td-text">
+                    <span class="beforeInput">Slika: </span>
+                </td>
+                <td>
+                    <div>
+                        <button mat-stroked-button type="button" (click)="filePicker.click()" style="background: rgb(195, 62, 62);">Izaberite sliku</button>
+                        <input type="file" #filePicker (change)="onImagePicked($event)">
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <div class="image-preview" *ngIf="imagePreview !== '' && imagePreview && form.get('image')?.valid">
+                        <img [src]="imagePreview" [alt]="form.value.title">
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="td-text">
+                    <span class="beforeInput">Naziv: </span>
+                </td>
+                <td class="oval">
+                    <input matInput placeholder="Naziv" formControlName="name" class="input-style" />
+                </td>
+            </tr>
+            <br />
+            <tr>
+                <td class="td-text">
+                    <span class="beforeInput">Opis: </span>
+                </td>
+                <td class="oval-description">
+                    <textarea matInput placeholder="Opis" formControlName="description" class="area-style"></textarea>
+                </td>
+            </tr>
+            <br>
+        </table>
+        <button mat-raised-button color="accent" type="submit" class="button-style">
+           Sačuvaj izmene
+        </button>
+    </form>
+    <span style="color: red">{{error_msg}}</span>
+</mat-card>

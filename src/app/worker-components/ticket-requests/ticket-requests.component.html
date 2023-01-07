@@ -1,0 +1,61 @@
+<mat-card *ngIf="requests && requests.length > 0">
+    <div class="container">
+        <mat-table [dataSource]="requests" class="mat-elevation-z8" *ngIf="requests.length>0" style="width: 60%;">
+            <ng-container matColumnDef="visitor">
+                <mat-header-cell *matHeaderCellDef>Posetilac</mat-header-cell>
+                <mat-cell *matCellDef="let element">{{element.visitor}}</mat-cell>
+            </ng-container>
+            <ng-container matColumnDef="packetType">
+                <mat-header-cell *matHeaderCellDef>Paket</mat-header-cell>
+                <mat-cell *matCellDef="let element">{{element.packetType}}</mat-cell>
+            </ng-container>
+            <ng-container matColumnDef="number">
+                <mat-header-cell *matHeaderCellDef>Broj posetilaca</mat-header-cell>
+                <mat-cell *matCellDef="let element">{{element.number}}</mat-cell>
+            </ng-container>
+            <ng-container matColumnDef="groupDiscount">
+                <mat-header-cell *matHeaderCellDef>Popust za grupnu ulaznicu</mat-header-cell>
+                <mat-cell *matCellDef="let element">{{element.groupDiscount}}%</mat-cell>
+            </ng-container>
+            <ng-container matColumnDef="promoCode">
+                <mat-header-cell *matHeaderCellDef>Promo kod</mat-header-cell>
+                <mat-cell *matCellDef="let element">{{element.promoDiscount}}</mat-cell>
+            </ng-container>
+            <ng-container matColumnDef="promoDiscount">
+                <mat-header-cell *matHeaderCellDef>Popust za promo kod</mat-header-cell>
+                <mat-cell *matCellDef="let element">{{element.promoDiscount}}%</mat-cell>
+            </ng-container>
+            <ng-container matColumnDef="price">
+                <mat-header-cell *matHeaderCellDef>Cena bez popusta</mat-header-cell>
+                <mat-cell *matCellDef="let element">{{element.price}}</mat-cell>
+            </ng-container>
+            <ng-container matColumnDef="finalPrice">
+                <mat-header-cell *matHeaderCellDef>Cena sa popustom</mat-header-cell>
+                <mat-cell *matCellDef="let element">{{element.finalPrice}}</mat-cell>
+            </ng-container>
+            <ng-container matColumnDef="approve">
+                <mat-header-cell *matHeaderCellDef>Odobri</mat-header-cell>
+                <mat-cell *matCellDef="let element">
+                    <button mat-icon-button (click)="approve(element.id)" *ngIf="!element.viewed">
+                  <mat-icon>done</mat-icon>
+                </button>
+                </mat-cell>
+            </ng-container>
+            <ng-container matColumnDef="reject">
+                <mat-header-cell *matHeaderCellDef>Odbij</mat-header-cell>
+                <mat-cell *matCellDef="let element">
+                    <button mat-icon-button (click)="reject(element.id)" *ngIf="!element.viewed">
+                  <mat-icon>clear</mat-icon>
+                </button>
+                </mat-cell>
+            </ng-container>
+            <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+            <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+        </mat-table>
+    </div>
+</mat-card>
+<mat-card *ngIf="!requests || requests.length === 0" class="no-data">
+    <mat-card-title class="no-data-title">
+        Nema zahteva!
+    </mat-card-title>
+</mat-card>

@@ -1,0 +1,28 @@
+img {
+    width: 176px;
+    height: 106px;
+    margin: 20px;
+}
+
+.container {
+    width: 50%;
+    margin: auto;
+}
+
+mat-header-cell {
+    font-family: 'Kalam';
+    font-weight: bold;
+    font-size: 24px;
+    justify-content: center;
+}
+
+mat-cell {
+    justify-content: center;
+}
+
+a {
+    text-decoration: none;
+    font-family: 'Kalam';
+    font-weight: bold;
+    font-size: 20px;
+}

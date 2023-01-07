@@ -1,0 +1,51 @@
+mat-card {
+    width: 40%;
+    margin: auto;
+}
+
+mat-card-title {
+    font-family: 'Kalam';
+    font-size: 28px;
+    text-decoration: underline;
+    margin: 40px;
+}
+
+button {
+    margin: 40px;
+}
+
+table,
+tr,
+td {
+    margin: auto;
+}
+
+.td-text {
+    text-align: right;
+}
+
+.beforeInput {
+    margin: 10px;
+    font-family: "Kalam";
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.oval {
+    width: 200px;
+    height: 40px;
+    background: rgb(103, 183, 90);
+    border-radius: 20px;
+}
+
+.input-style {
+    background-color: rgb(103, 183, 90);
+    border: none;
+    width: 80%;
+}
+
+.button-style {
+    background-color: rgb(103, 183, 90);
+    color: black;
+}

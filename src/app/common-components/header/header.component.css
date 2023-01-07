@@ -1,0 +1,53 @@
+mat-toolbar {
+    background-color: rgb(103, 183, 90);
+    height: 120px;
+}
+
+img {
+    width: 100px;
+    height: 100px;
+}
+
+#wrapper {
+    margin: 20px;
+    width: 100%;
+}
+
+#inner1 {
+    float: left;
+    padding-bottom: 10px;
+    width: 100%;
+    display: flex;
+}
+
+#inner2 {
+    float: left;
+    clear: left;
+    padding-top: 10px;
+    width: 100%;
+    display: flex;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
+
+ul {
+    display: flex;
+}
+
+.spacer {
+    flex: 1 1 auto;
+}
+
+.mat-success {
+    color: white;
+}

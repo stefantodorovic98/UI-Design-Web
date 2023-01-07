@@ -1,0 +1,45 @@
+<div class="container">
+    <div class="left">
+        <span class="left-element">
+        <button mat-icon-button (click)="onLeftArrowClick()">
+          <mat-icon>keyboard_arrow_left</mat-icon>
+        </button>
+      </span>
+    </div>
+    <div class="center">
+        <mat-card>
+            <table>
+                <tr>
+                    <td class="td-image">
+                        <div class="img-container"><img [src]="image" /></div>
+                    </td>
+                    <td class="td-buy">
+                        <div>
+                            <span class="buy-ticket">Kupi ulaznicu</span>
+                            <button mat-icon-button [routerLink]="['/ticketInfo',id]">
+                              <mat-icon>shopping_basket</mat-icon>
+                            </button>
+                        </div>
+                        <br>
+                        <div>
+                            <span class="buy-ticket">Kupi grupnu ulaznicu</span>
+                            <button mat-icon-button [routerLink]="['/groupTicketInfo',id]">
+                              <mat-icon>shopping_cart</mat-icon>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+            <mat-card-title>{{name}}</mat-card-title>
+            <br>
+            <span class="packet-text">{{description}}</span>
+        </mat-card>
+    </div>
+    <div class="right">
+        <span class="right-element">
+        <button mat-icon-button (click)="onRightArrowClick()">
+          <mat-icon>keyboard_arrow_right</mat-icon>
+        </button>
+      </span>
+    </div>
+</div>

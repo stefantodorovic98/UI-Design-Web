@@ -1,0 +1,53 @@
+<mat-toolbar>
+    <div><img src="assets/logo/logo.jpg" /></div>
+    <div id="wrapper">
+        <div id="inner1">
+            <span class="spacer"></span>
+            <ul>
+                <li *ngIf="authWorker || authVisitor">
+                    <a mat-button style="color: white" routerLink="/userData">
+            Promena podataka
+          </a>
+                </li>
+                <li *ngIf="authWorker || authVisitor">
+                    <a mat-button style="color: white" routerLink="/userPassword" *ngIf="authWorker || authVisitor">
+            Promena lozinke
+          </a>
+                </li>
+            </ul>
+        </div>
+        <div id="inner2">
+            <ul>
+                <li *ngIf="authWorker">
+                    <a mat-button style="color: white" routerLink="/ticketRequests">Zahtevi za ulaznicama</a>
+                </li>
+                <li *ngIf="authWorker">
+                    <a mat-button style="color: white" routerLink="/animalAdding">Dodavanje životinje</a>
+                </li>
+                <li *ngIf="authVisitor">
+                    <a mat-button style="color: white" routerLink="/packetInfo/0">Ulaznice i paketi</a>
+                </li>
+                <li *ngIf="authVisitor">
+                    <a mat-button style="color: white" routerLink="/eventInfo/0">Pregled dešavanja</a>
+                </li>
+                <li *ngIf="authVisitor">
+                    <a mat-button style="color: white" routerLink="/animalsList">Pregled životnja</a>
+                </li>
+                <li *ngIf="authVisitor">
+                    <a mat-button style="color: white" routerLink="/notifications">Obaveštenja</a>
+                </li>
+                <li *ngIf="authVisitor">
+                    <a mat-button style="color: white" routerLink="/contactInfo">Kontakt informacije</a>
+                </li>
+            </ul>
+            <span class="spacer"></span>
+            <ul>
+                <li *ngIf="authWorker || authVisitor">
+                    <div style="background-color: rgb(217, 217, 217)">
+                        <a mat-button (click)="onLogout()"> Odjava<mat-icon>exit_to_app</mat-icon> </a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</mat-toolbar>

@@ -1,0 +1,47 @@
+<mat-card>
+    <mat-card-title>Promena podataka</mat-card-title>
+    <form (submit)="onSave()" [formGroup]="form">
+        <table>
+            <tr>
+                <td class="td-text">
+                    <span class="beforeInput">Ime: </span>
+                </td>
+                <td class="oval">
+                    <input matInput placeholder="Ime" formControlName="firstname" class="input-style" />
+                </td>
+            </tr>
+            <br />
+            <tr>
+                <td class="td-text">
+                    <span class="beforeInput">Prezime: </span>
+                </td>
+                <td class="oval">
+                    <input matInput placeholder="Prezime" formControlName="lastname" class="input-style" />
+                </td>
+            </tr>
+            <br>
+            <tr>
+                <td class="td-text">
+                    <span class="beforeInput">Kontakt telefon: </span>
+                </td>
+                <td class="oval">
+                    <input matInput placeholder="Kontakt telefon" type="number" formControlName="phone" class="input-style" />
+                </td>
+            </tr>
+            <br>
+            <tr>
+                <td class="td-text">
+                    <span class="beforeInput">Adresa: </span>
+                </td>
+                <td class="oval">
+                    <input matInput placeholder="Adresa" formControlName="address" class="input-style" />
+                </td>
+            </tr>
+        </table>
+        <span style="color: red">{{error_msg}}</span>
+        <br>
+        <button mat-raised-button color="accent" type="submit" class="button-style">
+      Sačuvaj izmene
+    </button>
+    </form>
+</mat-card>

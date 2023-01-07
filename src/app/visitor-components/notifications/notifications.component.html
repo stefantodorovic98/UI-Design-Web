@@ -1,0 +1,18 @@
+<mat-card *ngIf="notifications && notifications.length > 0">
+    <div *ngFor="let temp of notifications" class="container">
+        <div class="left">
+            <p class="top">{{temp.message}}</p> <br>
+            <p class="bot">{{temp.dateString}}</p>
+        </div>
+        <div class="right">
+            <button mat-icon-button (click)="deleteNotification(temp.id)">
+              <mat-icon>delete</mat-icon>
+            </button>
+        </div>
+    </div>
+</mat-card>
+<mat-card *ngIf="!notifications || notifications.length === 0" class="no-data">
+    <mat-card-title class="no-data-title">
+        Nema obaveštenja!
+    </mat-card-title>
+</mat-card>

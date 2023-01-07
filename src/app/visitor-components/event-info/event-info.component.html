@@ -1,0 +1,40 @@
+<div class="container">
+    <div class="left">
+        <span class="left-element">
+          <button mat-icon-button (click)="onLeftArrowClick()">
+            <mat-icon>keyboard_arrow_left</mat-icon>
+          </button>
+        </span>
+    </div>
+    <div class="center">
+        <mat-card>
+            <mat-card-title>{{title}}</mat-card-title>
+            <table>
+                <tr>
+                    <td>
+                        <span class="event-text">{{description}}</span>
+                    </td>
+                    <td>
+                        <div class="img-container"><img [src]="image" /></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <button mat-icon-button (click)="likeEvent()">
+                          <mat-icon>thumb_up</mat-icon>
+                        </button>
+                        <span class="likes"> {{likes}}</span>
+                    </td>
+                </tr>
+            </table>
+        </mat-card>
+    </div>
+    <div class="right">
+        <span class="right-element">
+          <button mat-icon-button (click)="onRightArrowClick()">
+            <mat-icon>keyboard_arrow_right</mat-icon>
+          </button>
+        </span>
+    </div>
+</div>

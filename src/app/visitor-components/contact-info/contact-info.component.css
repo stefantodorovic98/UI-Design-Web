@@ -1,0 +1,32 @@
+mat-card {
+    width: 60%;
+    margin: auto;
+    padding: 40px;
+    background-color: rgb(187, 225, 181);
+}
+
+img {
+    width: 338px;
+    height: 226px;
+    margin: 20px;
+}
+
+table,
+tr,
+td {
+    margin: auto;
+}
+
+h3 {
+    font-family: 'Kalam';
+    font-weight: bold;
+}
+
+.img-container {
+    margin: 20px;
+    padding: 10px;
+}
+
+.contact-text {
+    font-family: 'Kalam';
+}

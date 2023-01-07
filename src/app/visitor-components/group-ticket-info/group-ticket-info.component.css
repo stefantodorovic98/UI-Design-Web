@@ -1,0 +1,83 @@
+mat-card {
+    width: 50%;
+    margin: auto;
+    padding: 40px;
+}
+
+mat-card-title {
+    font-family: 'Kalam';
+    font-weight: bold;
+    font-size: 28px;
+    margin: 40px;
+}
+
+button {
+    margin: 40px;
+}
+
+table,
+tr {
+    width: 100%;
+    margin: auto;
+}
+
+.td-image {
+    width: 30%;
+}
+
+.img-container {
+    margin: 20px;
+    padding: 10px;
+}
+
+img {
+    width: 238px;
+    height: 107px;
+    margin: 20px;
+}
+
+.td-buy {
+    width: 70%;
+    padding: 20px;
+}
+
+.td-text {
+    text-align: left;
+    width: 40%;
+}
+
+.beforeInput {
+    margin: 10px;
+    font-family: "Kalam";
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.oval {
+    width: 300px;
+    height: 40px;
+    border-radius: 20px;
+}
+
+.input-style {
+    border: none;
+    width: 80%;
+}
+
+.button-style {
+    color: black;
+}
+
+.title-style {
+    font-family: 'Kalam';
+    font-weight: bold;
+    font-size: 28px;
+    text-align: left;
+    margin: 0px;
+}
+
+.ticket-text {
+    font-family: 'Kalam';
+    font-size: 20px;
+    text-align: left;
+}

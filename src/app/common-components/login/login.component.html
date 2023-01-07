@@ -1,0 +1,42 @@
+<mat-card>
+    <mat-card-title>Prijava</mat-card-title>
+    <form (submit)="onLogin()" [formGroup]="form">
+        <table>
+            <tr>
+                <td class="td-text">
+                    <span class="beforeInput">Korisnicko ime: </span>
+                </td>
+                <td class="oval">
+                    <input matInput placeholder="Korisničko ime" formControlName="username" class="input-style" />
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <span style="color: red">{{error_username}}</span>
+                </td>
+            </tr>
+            <br>
+            <tr>
+                <td class="td-text">
+                    <span class="beforeInput">Lozinka: </span>
+                </td>
+                <td class="oval">
+                    <input matInput placeholder="Lozinka" type="password" formControlName="password" class="input-style" />
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <span style="color: red">{{error_password}}</span>
+                </td>
+            </tr>
+            <br>
+        </table>
+        <span style="color: red">{{error_login}}</span>
+        <br>
+        <button mat-raised-button type="submit" class="button-style" style="background-color: rgb(103, 183, 90);">
+      Prijavi se
+    </button>
+    </form>
+</mat-card>

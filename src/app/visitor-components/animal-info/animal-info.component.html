@@ -1,0 +1,77 @@
+<mat-card>
+    <mat-card-title>{{animal.name}}</mat-card-title>
+    <mat-card class="description-card">
+        <table>
+            <tr>
+                <td>
+                    <p class="event-text">{{animal.description}}</p>
+                </td>
+                <td>
+                    <div class="img-container"><img [src]="animal.image" /></div>
+                </td>
+            </tr>
+        </table>
+    </mat-card>
+    <br>
+    <br/>
+    <div class="container">
+        <div class="left">
+            <mat-card class="comment-card">
+                <mat-card-title class="subtitle">Ostavite komentar</mat-card-title>
+                <br/>
+                <form (submit)="onCommentAdd()" [formGroup]="form">
+                    <table>
+                        <tr>
+                            <td class="td-text">
+                                <span class="beforeInput">Ime: </span>
+                            </td>
+                            <td class="td-input">
+                                <input matInput placeholder="Ime" formControlName="name" class="input-style" />
+                            </td>
+                        </tr>
+                        <br>
+                        <tr>
+                            <td class="td-text">
+                                <span class="beforeInput">Komentar: </span>
+                            </td>
+                            <td class="td-input-area">
+                                <textarea matInput placeholder="Komentar" formControlName="comment" class="area-style" maxlength="300"></textarea>
+                            </td>
+                        </tr>
+                        <br/>
+                        <tr>
+                            <td></td>
+                            <td>
+                                <button mat-raised-button type="submit" class="button-style">Dodaj komentar</button>
+                            </td>
+                        </tr>
+                    </table>
+                    <span style="color: red">{{error_msg}}</span>
+                </form>
+            </mat-card>
+        </div>
+        <div class="right">
+            <mat-card class="comment-card-right">
+                <mat-card-title class="subtitle">Komentari posetilaca</mat-card-title>
+                <br>
+                <mat-accordion multi="true" *ngIf="comments.length > 0">
+                    <mat-expansion-panel *ngFor="let temp of comments" style="background-color: rgb(217, 217, 217);">
+                        <mat-expansion-panel-header>
+                            {{ temp.name }}
+                        </mat-expansion-panel-header>
+                        <div class="comment-text">
+                            <p class="comment">{{ temp.comment }}</p>
+                        </div>
+                    </mat-expansion-panel>
+                </mat-accordion>
+                <mat-paginator [length]="totalComments" [pageSize]="commentsPerPage" [pageSizeOptions]="pageSizeOptions" (page)="onChangedPage($event)" *ngIf="comments.length > 0"></mat-paginator>
+            </mat-card>
+            <br>
+            <mat-card *ngIf="!comments || comments.length === 0" class="no-data">
+                <mat-card-title class="no-data-title">
+                    Nema komentara!
+                </mat-card-title>
+            </mat-card>
+        </div>
+    </div>
+</mat-card>

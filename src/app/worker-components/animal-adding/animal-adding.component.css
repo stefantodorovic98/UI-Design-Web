@@ -1,0 +1,78 @@
+mat-card {
+    width: 40%;
+    margin: auto;
+}
+
+mat-card-title {
+    font-size: 28px;
+    text-decoration: underline;
+    margin: 40px;
+}
+
+button {
+    margin: 20px;
+}
+
+table,
+tr,
+td {
+    margin: auto;
+}
+
+.td-text {
+    text-align: right;
+}
+
+.beforeInput {
+    margin: 10px;
+    font-family: "Kalam";
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.oval {
+    width: 200px;
+    height: 40px;
+    background: rgb(103, 183, 90);
+    border-radius: 20px;
+}
+
+.oval-description {
+    width: 200px;
+    height: 150px;
+    background: rgb(103, 183, 90);
+    border-radius: 20px;
+}
+
+.area-style {
+    background-color: rgb(103, 183, 90);
+    border: none;
+    width: 80%;
+    height: 80%;
+    resize: none;
+}
+
+.input-style {
+    background-color: rgb(103, 183, 90);
+    border: none;
+    width: 80%;
+}
+
+.button-style {
+    background-color: rgb(103, 183, 90);
+    color: black;
+}
+
+input[type="file"] {
+    visibility: hidden;
+}
+
+.image-preview {
+    height: 5rem;
+    margin: 1rem 0;
+}
+
+.image-preview img {
+    height: 100%;
+}

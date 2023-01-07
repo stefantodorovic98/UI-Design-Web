@@ -1,0 +1,19 @@
+<div class="container">
+    <mat-table [dataSource]="animals" class="mat-elevation-z8" *ngIf="animals.length>0" style="width: 60%;">
+        <ng-container matColumnDef="image">
+            <mat-header-cell *matHeaderCellDef>Slika</mat-header-cell>
+            <mat-cell *matCellDef="let element">
+                <div><img [src]="element.image" /> </div>
+            </mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="name">
+            <mat-header-cell *matHeaderCellDef> Naziv </mat-header-cell>
+            <mat-cell *matCellDef="let element">
+                <a mat-button [routerLink]="['/animalInfo', element.id]">{{element.name}}</a>
+            </mat-cell>
+        </ng-container>
+        <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+        <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+    </mat-table>
+    <mat-paginator [length]="totalAnimals" [pageSize]="animalsPerPage" [pageSizeOptions]="pageSizeOptions" (page)="onChangedPage($event)" *ngIf="animals.length > 0"></mat-paginator>
+</div>
